@@ -46,13 +46,20 @@ gameApp.winAlert=function(){
     let liList=$('.unhidden')
     if(liList.length==12){
         swal({
-            title: "Good job!",
-            icon: "success",
-            button: "I am done!"
-          });
-    }
-}
+        title: "Good job!",
+        text: "Do you want to continue?",
+        icon: "success",
+        buttons: ["Oh noez!", "Aww yiss!"]
+      }).then(function(val){ 
+          if(val){
+          location.reload()
+        }
+          else{
+              swal("Bye")
+          }
+      
+    })
+}}
 $(document).ready(function(){
     gameApp.init();
 })
-// To be further completed by unsplash API
