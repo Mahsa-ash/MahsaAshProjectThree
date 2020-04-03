@@ -6,6 +6,9 @@
 h1{
     text-align: center;
 }
+body{
+    background-color: rgb(160, 53, 53);
+}
 ul{
     display: flex;
     flex-wrap: wrap;
@@ -24,7 +27,7 @@ ul{
         div{
             width: 100%;
             position: absolute;
-            background-color: green;
+            background-color: rgb(33, 126, 118);
             top:0;
             transition: height, 0.5s;
             border-radius: 20%;

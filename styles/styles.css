@@ -245,6 +245,10 @@ h1 {
   text-align: center;
 }
 
+body {
+  background-color: #a03535;
+}
+
 ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -270,7 +274,7 @@ ul li img {
 ul li div {
   width: 100%;
   position: absolute;
-  background-color: green;
+  background-color: #217e76;
   top: 0;
   -webkit-transition: height, 0.5s;
   transition: height, 0.5s;
