@@ -241,8 +241,22 @@ html {
   margin: 0 auto;
 }
 
-h1 {
-  text-align: center;
+header.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+}
+
+header.wrapper h1 {
+  font-family: 'Indie Flower', cursive;
+  font-size: 50px;
+  margin: 60px 0;
+}
+
+header.wrapper img {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 body {
@@ -282,7 +296,7 @@ ul li div {
 }
 
 .hidden {
-  height: 212.55px;
+  height: 100%;
 }
 
 .unhidden {
