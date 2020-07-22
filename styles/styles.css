@@ -14,7 +14,7 @@ article, aside, footer, header, nav, section {
 
 h1 {
   font-size: 2em;
-  margin: .67em 0;
+  margin: 0.67em 0;
 }
 
 figcaption, figure, main {
@@ -26,14 +26,13 @@ figure {
 }
 
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   height: 0;
   overflow: visible;
 }
 
 pre {
-  font-family: monospace,monospace;
+  font-family: monospace, monospace;
   font-size: 1em;
 }
 
@@ -58,7 +57,7 @@ b, strong {
 }
 
 code, kbd, samp {
-  font-family: monospace,monospace;
+  font-family: monospace, monospace;
   font-size: 1em;
 }
 
@@ -83,11 +82,11 @@ sub, sup {
 }
 
 sub {
-  bottom: -.25em;
+  bottom: -0.25em;
 }
 
 sup {
-  top: -.5em;
+  top: -0.5em;
 }
 
 audio, video {
@@ -136,12 +135,11 @@ button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring
 }
 
 fieldset {
-  padding: .35em .75em .625em;
+  padding: 0.35em 0.75em 0.625em;
 }
 
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   color: inherit;
   display: table;
   max-width: 100%;
@@ -159,8 +157,7 @@ textarea {
 }
 
 [type=checkbox], [type=radio] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0;
 }
 
@@ -206,19 +203,17 @@ template {
   visibility: hidden;
   display: block;
   font-size: 0;
-  content: '';
+  content: "";
   clear: both;
   height: 0;
 }
 
 html {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 *, *:before, *:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 .sr-only {
@@ -244,28 +239,21 @@ html {
 header.wrapper {
   padding-bottom: 50px;
 }
-
 header.wrapper div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 header.wrapper h1 {
-  font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
   font-size: 50px;
   color: salmon;
   margin: 0;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
 }
-
 header.wrapper img {
   margin: 0 20px;
 }
-
 header.wrapper p {
-  font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
   font-size: 30px;
 }
 
@@ -273,15 +261,16 @@ body {
   background-color: #a03535;
 }
 
-ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
+div.wrapper {
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding: 0;
+  text-align: center;
 }
 
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
 ul li {
   list-style: none;
   width: calc(100%/4 - 40px);
@@ -290,19 +279,20 @@ ul li {
   border: salmon dashed 1.5px;
   border-radius: 20%;
 }
-
 ul li img {
   display: block;
   width: 100%;
   border-radius: 20%;
 }
-
 ul li div {
   width: 100%;
   position: absolute;
-  background-color: #217e76;
+  background-image: url(./assets/qmark.png);
+  background-size: contain;
+  background-color: #0b627c;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.315);
   top: 0;
-  -webkit-transition: height, 0.5s;
+  z-index: 1;
   transition: height, 0.5s;
   border-radius: 20%;
 }
@@ -319,27 +309,28 @@ ul li div {
   .wrapper {
     width: 85%;
   }
+
   header.wrapper p {
     font-size: 20px;
   }
 }
-
 @media (max-width: 600px) {
   .wrapper {
     width: 90%;
   }
+
   header.wrapper {
     padding-bottom: 30px;
   }
   header.wrapper h1 {
     font-size: 40px;
   }
+
   body ul li {
     width: calc(100%/4 - 20px);
     margin: 20px 10px;
   }
 }
-
 @media (max-width: 400px) {
   body ul li {
     width: calc(100%/3 - 20px);

@@ -8,18 +8,22 @@
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/575b3052be.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Memory matching game</title>
 </head>
 <body>
     <header class="wrapper">
         <div>
-            <h1>Lets play !</h1>
+            <h1>Memory matching game</h1>
             <img src="https://cultofthepartyparrot.com/parrots/hd/reverseparrot.gif" alt="a dancing parrot">
-            <!-- <img src="./styles/assets/58adf251e612507e27bd3c32.png" alt="speech bubble"> -->
         </div>
         <p>pick any two cards to see if they match. If two consequent cards match they will stay unhidden, if not they'll hide again. </p>
+        <button class="startGame"><a href="#main">Lets play</a></button>
     </header>
-    <main>
+    <main id="main">
+    <div class="wrapper">
+        <p class="movesCounter">moves <span></span></p>
+        <p class="timer">timer <span></span></p>
+    </div>
     <ul class="wrapper">
         <li  class="pairOne">
             <img src="https://picsum.photos/200/200?random=1" alt="picture for pair one">
@@ -78,14 +82,6 @@
             <img src="https://picsum.photos/200/200?random=6" alt="picture for pair six">
             <div class="hidden" ></div>
         </li>
-        <!-- <li class="pairSeven">
-            <img src="https://picsum.photos/200/200?random=7" alt="">
-            <div class="hidden"></div>
-        </li>
-        <li class="pairEight">
-            <img src="https://picsum.photos/200/200?random=8" alt="">
-            <div class="hidden"></div>
-        </li> -->
     </ul>
     </main>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
