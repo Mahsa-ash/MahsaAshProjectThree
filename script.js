@@ -1,7 +1,7 @@
 const gameApp={}
 gameApp.parentClass=[]
 gameApp.i=0
-gameApp.k=0
+gameApp.movesCounter=0;
 gameApp.choice=[]
 gameApp.init=function(){
     gameApp.randOrder()
@@ -14,20 +14,42 @@ $('li').css('order',function(){
     return Math.floor(Math.random()*16)
 })}
 gameApp.timer=function(){
-    $('.startGame').on('click',function(){
-        let start=0
-        setInterval(function() {
-        start++
-        $('.timer span').text(start)
-    }, 1000);
+    let start=0;
+    let intervalID;
+    // on click, if the start variable is zero, start the timer with setInterval, else alert "game in progress". If user selects yes!, then the previous setInterval is cleared with clearInterval and a new one starts. Also, the movesCounter variable is reset to zero.
+    $('.startGame').on('click',function(){ 
+        if (start == 0){
+            intervalID=setInterval(function() {
+                start++
+                $('.timer span').text(`${start} s` )
+            }, 1000) 
+        }
+        else{
+            swal({
+                title: "Game in progress!",
+                text: "Do you want to restart?",
+                icon: "success",
+                buttons: ["No!", "Yes!"]
+              }).then(function(val){
+                  if(val){
+                    clearInterval(intervalID)
+                    start=0;
+                    intervalID=setInterval(function() {
+                        start++
+                        $('.timer span').text(`${start} s` )
+                    }, 1000) 
+                    gameApp.movesCounter=0;
+                    location.reload()
+                  }
+              })
+        };
     }) 
 }
 gameApp.click=function(){
-    let movesCounter=0;
         $('div').on('click', function(){
             if(gameApp.i<2){
-            movesCounter++
-            $('.movesCounter span').text(movesCounter)
+            gameApp.movesCounter++
+            $('.movesCounter span').text(gameApp.movesCounter)
             gameApp.i++ // counter to count number of clicks 
             gameApp.choice[gameApp.i]=$(this) //storing the clicked item in the choice array
             $(this).removeClass('hidden')
