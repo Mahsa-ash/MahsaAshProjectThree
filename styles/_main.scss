@@ -32,14 +32,14 @@ header.wrapper{
     button{
         width: 200px;
         margin: 30px auto;
-        background-color: rgb(64, 141, 165);
+        background-color: #181e1e;
         padding: 5px;
-        border:  rgb(64, 141, 165);
+        border:  #181e1e;
         border-radius: 30%;
-        box-shadow: #f1f6fa 4px 4px 7px;;
+        box-shadow: #f1f6fa 4px 4px 7px;
         a{
             text-decoration: none;
-            color: black;
+            color: white;;
         }
     }
 }
@@ -66,7 +66,7 @@ ul{
         width:calc(100%/4 - 40px);
         margin:20px;
         position: relative;
-        border:rgb(64, 141, 165) solid 1.5px;
+        border:#181e1e solid 1.5px;
         border-radius: 20%;
         
         img{
@@ -80,7 +80,7 @@ ul{
             position: absolute;
             background-image: url(./assets/qmark.png);
             background-size: contain;
-            background-color: rgb(64, 141, 165);
+            background-color: #181e1e;
             box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.315);
             top:0;
             z-index: 1;

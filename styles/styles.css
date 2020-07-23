@@ -267,15 +267,15 @@ header.wrapper p {
 header.wrapper button {
   width: 200px;
   margin: 30px auto;
-  background-color: #408da5;
+  background-color: #181e1e;
   padding: 5px;
-  border: #408da5;
+  border: #181e1e;
   border-radius: 30%;
   box-shadow: #f1f6fa 4px 4px 7px;
 }
 header.wrapper button a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 main {
@@ -302,7 +302,7 @@ ul li {
   width: calc(100%/4 - 40px);
   margin: 20px;
   position: relative;
-  border: #408da5 solid 1.5px;
+  border: #181e1e solid 1.5px;
   border-radius: 20%;
 }
 ul li img {
@@ -315,7 +315,7 @@ ul li div {
   position: absolute;
   background-image: url(./assets/qmark.png);
   background-size: contain;
-  background-color: #408da5;
+  background-color: #181e1e;
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.315);
   top: 0;
   z-index: 1;
